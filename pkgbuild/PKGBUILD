@@ -1,5 +1,5 @@
 pkgname=dispose
-pkgver=r4.f763e5c
+pkgver=r5.1398ded
 pkgrel=1
 pkgdesc="dispose folder"
 arch=('any')
@@ -15,8 +15,9 @@ pkgver() {
 
 
 package() {
+  cd ${srcdir}/dispose
   mkdir -p ${pkgdir}/etc/system/systemd
-  mkdir -p ${pkgdir}/lib
-  cp ${srcdir}/dispose/dispose.sh ${pkgdir}/bin/dispose.sh
-  cp ${srcdir}/dispose/dispose.service ${pkgdir}/etc/system/systemd
+  mkdir -p ${pkgdir}/usr/bin
+  cp dispose ${pkgdir}/usr/bin/dispose
+  cp dispose.service ${pkgdir}/etc/system/systemd/
 }

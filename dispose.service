@@ -5,7 +5,7 @@ Before=shutdown.target
 
 [Service]
 Type=oneshot
-ExecStart=/bin/dispose.sh
+ExecStart=/usr/bin/dispose
 TimeoutStartSec=0
 
 [Install]
