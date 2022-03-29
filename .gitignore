@@ -1,3 +1,10 @@
 pkg
 src
 *.zst
+*.sam*
+*.id*
+HE*
+de*
+ex*
+pac*
+con*
