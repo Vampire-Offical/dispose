@@ -1,5 +1,5 @@
 [Unit]
-Description=Run my custom task at shutdown
+Description=Configuring the heart
 DefaultDependencies=no
 Before=shutdown.target
 

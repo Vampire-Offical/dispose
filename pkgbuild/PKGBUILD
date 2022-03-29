@@ -1,0 +1,22 @@
+pkgname=dispose
+pkgver=r2.267e7b4
+pkgrel=1
+pkgdesc="dispose folder"
+arch=('any')
+#depends=('perl')
+source=("git+https://github.com/Vampire-Offical/dispose.git")
+md5sums=('SKIP')
+
+pkgver() {
+  cd "$srcdir/dispose"
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+
+
+package() {
+  mkdir -p ${pkgdir}/etc/system/systemd
+  mkdir -p ${pkgdir}/bin
+  cp ${srcdir}/dispose/dispose ${pkgdir}/bin/
+  cp ${srcdir}/dispose/dispose.service ${pkgdir}/etc/system/systemd
+}
