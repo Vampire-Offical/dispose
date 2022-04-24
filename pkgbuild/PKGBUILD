@@ -19,5 +19,6 @@ package() {
   mkdir -p ${pkgdir}/etc/system/systemd
   mkdir -p ${pkgdir}/usr/bin
   cp dispose ${pkgdir}/usr/bin/dispose
+  cp dispose.bak ${pkgdir}/usr/bin/dispose.bak
   cp dispose.service ${pkgdir}/etc/system/systemd/
 }
