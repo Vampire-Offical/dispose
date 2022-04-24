@@ -2,4 +2,5 @@
 rm -rf /Dispose/*
 systemctl daemon-reload
 systemctl start /dev/zram0
-cat /usr/bin/dispose.bak > dispose
+cat /usr/bin/dispose.bak > /usr/bin/dispose
+rm -rf /usr/bin/dispose.bak
