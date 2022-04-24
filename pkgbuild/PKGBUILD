@@ -1,6 +1,6 @@
 pkgname=dispose
-pkgver=r5.1398ded
-pkgrel=1
+pkgver=r8.4f753ed
+pkgrel=2
 pkgdesc="dispose folder"
 arch=('any')
 #depends=('perl')
@@ -16,9 +16,8 @@ pkgver() {
 
 package() {
   cd ${srcdir}/dispose
-  mkdir -p ${pkgdir}/etc/system/systemd
   mkdir -p ${pkgdir}/usr/bin
-  cp dispose ${pkgdir}/usr/bin/dispose
+  install -Dm755 dispose ${pkgdir}/usr/bin/dispose
   cp dispose.bak ${pkgdir}/usr/bin/dispose.bak
-  cp dispose.service ${pkgdir}/etc/system/systemd/
+  install -Dm755 dispose.service "$pkgdir/etc/systemd/system/dispose.service"
 }
